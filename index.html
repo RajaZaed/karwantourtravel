@@ -3,156 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Karwan e Bismillah</title>
+<title>Karwan e Bismillah Tours & Travel |Rawalpindi</title>
+<link rel="stylesheet" href="assets/style/style.css">
+<link rel="icon" href="assets/images/Congratulations! Matric is Done!.png">
+<!-- Font Awesome for Social Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-        font-family: 'Lato', sans-serif;
-        background: rgb(245, 239, 230);
-        color: rgb(92, 64, 51);
-    }
-
-    /* Navbar */
-    nav {
-        background: linear-gradient(90deg, rgb(255, 183, 77), rgb(245, 222, 179));
-        padding: 12px 20px;
-        position: relative;
-        z-index: 1000;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.15);
-    }
-
-    .nav-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo img {
-        height: 50px;
-        width: auto;
-    }
-
-    /* Hamburger */
-    .menu-btn {
-        width: 30px;
-        height: 22px;
-        position: relative;
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .menu-btn span {
-        display: block;
-        height: 3px;
-        background: white;
-        border-radius: 2px;
-        transition: 0.3s;
-    }
-
-    /* Menu Panel */
-    .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 270px;
-        height: 100%;
-        background: linear-gradient(180deg, rgb(255, 200, 124), rgb(255, 239, 213));
-        display: flex;
-        flex-direction: column;
-        padding-top: 80px;
-        gap: 20px;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.2);
-        transition: right 0.4s ease;
-    }
-
-    .nav-links a {
-        color: rgb(92, 64, 51);
-        text-decoration: none;
-        padding: 12px 25px;
-        font-size: 1.05rem;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        transition: 0.3s;
-        opacity: 0;
-        transform: translateX(30px);
-    }
-
-    .nav-links a:hover {
-        background: rgba(255, 255, 255, 0.25);
-        box-shadow: inset 0 0 8px rgba(0,0,0,0.15);
-    }
-
-    /* Show Menu */
-    .nav-active {
-        right: 0;
-    }
-
-    /* Stagger Animation for Links */
-    .nav-active a {
-        animation: fadeSlideIn 0.4s ease forwards;
-    }
-
-    .nav-active a:nth-child(1) { animation-delay: 0.1s; }
-    .nav-active a:nth-child(2) { animation-delay: 0.2s; }
-    .nav-active a:nth-child(3) { animation-delay: 0.3s; }
-    .nav-active a:nth-child(4) { animation-delay: 0.4s; }
-
-    @keyframes fadeSlideIn {
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    /* Hamburger to Cross */
-    .menu-btn.open span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 6px);
-    }
-    .menu-btn.open span:nth-child(2) {
-        opacity: 0;
-    }
-    .menu-btn.open span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -6px);
-    }
-
-    /* Overlay */
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        opacity: 0;
-        visibility: hidden;
-        transition: 0.3s;
-        z-index: 500;
-    }
-
-    .overlay.show {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    /* Footer */
-    footer {
-        background: linear-gradient(90deg, rgb(255, 200, 124), rgb(245, 222, 179));
-        color: rgb(92, 64, 51);
-        text-align: center;
-        padding: 15px 10px;
-        margin-top: 30px;
-        font-size: 0.95rem;
-        letter-spacing: 0.5px;
-        box-shadow: 0 -2px 10px rgba(0,0,0,0.15);
-    }
+   
 </style>
 </head>
 <body>
@@ -188,10 +50,79 @@
     <p>Your journey to Umrah starts here.</p>
 </main>
 
+<!-- now -->
+ <!-- Hero Section -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Karwan e Bismillah Tours & Travels</h1>
+    <p>Your trusted partner for memorable journeys across the world. Experience comfort, trust, and unforgettable adventures.</p>
+    <a href="#services" class="hero-btn">Explore Services</a>
+  </div>
+  <div class="hero-image">
+    <img src="assets/images/mai.jpg" alt="Karwan e Bismillah" />
+  </div>
+</section>
+
+
+
+
+
 <!-- Footer -->
-<footer>
-    <p>© 2025 Karwan e Bismillah. All Rights Reserved.</p>
+<!-- ===== FOOTER START ===== -->
+<footer style="background-color: #ffffff; color: #003366; padding: 40px 0; border-top: 4px solid #003366;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px;">
+
+    <!-- Company Info -->
+    <div style="flex: 1 1 250px; min-width: 250px;">
+      <h2 style="margin-bottom: 15px; font-size: 22px; color: #003366;">Karwan e Bismillah Tours & Travels</h2>
+      <p style="margin: 5px 0;">📍 B-17, Islamabad, Pakistan</p>
+      <p style="margin: 5px 0;">📧 <a href="mailto:info@karwanbismillah.com" style="color: #003366; text-decoration: none;">info@karwanbismillah.com</a></p>
+      <p style="margin: 5px 0;">📞 <a href="tel:+923001234567" style="color: #003366; text-decoration: none;">+92 300 1234567</a></p>
+      <p style="margin: 5px 0;">📞 <a href="tel:+923331234567" style="color: #003366; text-decoration: none;">+92 333 1234567</a></p>
+    </div>
+
+    <!-- Social Media -->
+    <div style="flex: 1 1 200px; min-width: 200px;">
+      <h3 style="margin-bottom: 15px; font-size: 20px; color: #003366;">Follow Us</h3>
+      <div style="display: flex; gap: 12px;">
+        <a href="#" target="_blank" style="color: #003366; font-size: 22px; transition: 0.3s;">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" target="_blank" style="color: #003366; font-size: 22px; transition: 0.3s;">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" target="_blank" style="color: #003366; font-size: 22px; transition: 0.3s;">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" target="_blank" style="color: #003366; font-size: 22px; transition: 0.3s;">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div style="text-align: center; margin-top: 30px; font-size: 14px; color: #666;">
+    &copy; <span id="year"></span> Karwan e Bismillah Tours & Travels. All Rights Reserved.
+  </div>
 </footer>
+
+<!-- Font Awesome for Social Icons -->
+<script src="https://kit.fontawesome.com/4b93f520b3.js" crossorigin="anonymous"></script>
+
+<script>
+  document.getElementById("year").innerText = new Date().getFullYear();
+</script>
+
+<style>
+  footer a:hover {
+    color: #ff9900 !important; /* Gold hover effect */
+  }
+</style>
+<!-- ===== FOOTER END ===== -->
+
+
 
 <script>
     const menuBtn = document.getElementById('menu-btn');

@@ -33,6 +33,64 @@
         </div>
     </nav>
 
+    <!-- sldkjf -->
+     <!-- silver -->
+      <section class="hero">
+    <div class="hero-content">
+        <h1>Experience the Spiritual Journey of Umrah</h1>
+        <p>Join our exclusive Umrah packages and make your pilgrimage memorable.</p>
+        <a href="#silver" class="btn-book">View Packages</a>
+    </div>
+    <div class="hero-image">
+        <img src="assets/images/hotel 2.jpg" alt="Umrah">
+    </div>
+</section>
+
+<!-- silver one -->
+ <section class="package-section">
+    <div class="package-card">
+        <div class="package-image">
+            <img src="assets/images/p1.jpg" alt="Silver Package">
+        </div>
+        <div class="package-details" >
+            <h2 id="silver">Silver Package</h2>
+            <ul>
+                <li>Economy + Plus Hotel</li>
+                <li>Visa Included</li>
+                <li>Transport Provided</li>
+                <li>Return Ticket</li>
+                <li>Health Insurance</li>
+                <li>Makkah & Madina Ziarat</li>
+            </ul>
+            <a href="#book" class="btn-book">Book Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- golgd -->
+ <section class="package-section">
+    <div class="package-card golden">
+        <div class="package-image">
+            <img src="assets/images/hotel 1.jpg" alt="Golden Package">
+        </div>
+        <div class="package-details">
+            <h2>Golden Package</h2>
+            <ul>
+                <li>3 Star Hotel</li>
+                <li>Visa Included</li>
+                <li>Transport Provided</li>
+                <li>Return Ticket</li>
+                <li>Health Insurance</li>
+                <li>Makkah & Madina Ziarat</li>
+            </ul>
+            <a href="#book" class="btn-book">Book Now</a>
+        </div>
+    </div>
+</section>
+
+
+
+
 
 
     <!-- footer -->
@@ -74,7 +132,21 @@
   </div>
 </footer>
  
+<script>
+  const heroContent = document.querySelector('.hero-content');
 
+window.addEventListener('scroll', () => {
+    const scrollPos = window.scrollY;
+    if(scrollPos > 50){
+        heroContent.style.opacity = 1;
+        heroContent.style.transform = 'translateY(0)';
+    } else {
+        heroContent.style.opacity = 0;
+        heroContent.style.transform = 'translateY(50px)';
+    }
+});
+
+</script>
 
 </body>
 </html>

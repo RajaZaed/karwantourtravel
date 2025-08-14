@@ -311,3 +311,240 @@
   border-radius: 20px;
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
 }
+
+
+/* sldkf */
+.packages-home {
+    padding: 60px 10%;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.packages-home h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Flexbox layout for single line */
+.packages-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: nowrap; /* keep in one line */
+}
+
+.package-box {
+    flex: 1 1 23%; /* four boxes in one row with spacing */
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.package-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.package-box img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.package-box h3 {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.package-box ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.package-box ul li {
+    font-size: 0.95rem;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.btn-learn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-learn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive: allow wrapping on small screens */
+@media(max-width: 1200px){
+    .packages-grid {
+        flex-wrap: wrap;
+    }
+
+    .package-box {
+        flex: 1 1 45%;
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 700px){
+    .package-box {
+        flex: 1 1 100%;
+    }
+}
+/* slkdjf */
+.services-home {
+    padding: 60px 10%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.services-home h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-box {
+    flex: 1 1 30%;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.service-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.service-box p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.btn-reserve {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: blue;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-reserve:hover {
+    background-color: rgb(255, 150, 50);
+}
+
+/* Responsive */
+@media(max-width: 900px){
+    .service-box {
+        flex: 1 1 45%;
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 600px){
+    .service-box {
+        flex: 1 1 100%;
+    }
+}
+
+
+.counters-home {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f5f5f5;
+    padding: 60px 10%;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.counter-box {
+    flex: 1 1 200px;
+    margin: 20px;
+}
+
+.counter-box h3 {
+    font-size: 3rem;
+    color: #ff9900;
+    margin-bottom: 10px;
+}
+
+.counter-box p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Responsive */
+@media(max-width: 700px){
+    .counters-home {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .counter-box {
+        margin: 15px 0;
+    }
+}
+
+
+/* animation */
+.loop-animation {
+    width: 100%;
+    overflow: hidden;
+  /* optional: makes text pop */
+    padding: 20px 0;
+}
+
+.marquee {
+    display: flex;
+    width: max-content;
+    animation: marqueeLoop 10s linear infinite;
+}
+
+.marquee span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(255,150,50);
+    margin-right: 50px; /* space between repeats */
+    white-space: nowrap;
+}
+
+/* Keyframes for continuous left-to-right movement */
+@keyframes marqueeLoop {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}

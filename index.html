@@ -47,6 +47,127 @@
   </div>
 </section>
 
+<!-- box -->
+ <section class="packages-home">
+    <h2>Our Umrah Packages</h2>
+    <div class="packages-grid">
+        <!-- Silver Package -->
+        <div class="package-box">
+            <img src="assets/images/hotel 1.jpg" alt="Silver Package">
+            <h3>Silver Package</h3>
+            <ul>
+                <li>Economy + Plus Hotel</li>
+                <li>Visa</li>
+                <li>Transport</li>
+                <li>Return Ticket</li>
+                <li>Health Insurance</li>
+                <li>Makkah & Madina Ziarat</li>
+            </ul>
+            <a href="#silver" class="btn-learn">Learn More</a>
+        </div>
+
+        <!-- Golden Package -->
+        <div class="package-box">
+            <img src="assets/images/golden-package.jpg" alt="Golden Package">
+            <h3>Golden Package</h3>
+            <ul>
+                <li>3 Star Hotel</li>
+                <li>Visa</li>
+                <li>Transport</li>
+                <li>Return Ticket</li>
+                <li>Health Insurance</li>
+                <li>Makkah & Madina Ziarat</li>
+            </ul>
+            <a href="#golden" class="btn-learn">Learn More</a>
+        </div>
+
+        <!-- Platinum Package -->
+        <div class="package-box">
+            <img src="assets/images/platinum-package.jpg" alt="Platinum Package">
+            <h3>Platinum Package</h3>
+            <ul>
+                <li>4 Star Hotel</li>
+                <li>Visa</li>
+                <li>Transport</li>
+                <li>Return Ticket</li>
+                <li>Health Insurance</li>
+                <li>Makkah & Madina Ziarat</li>
+            </ul>
+            <a href="#platinum" class="btn-learn">Learn More</a>
+        </div>
+
+        <!-- 5 Star Package -->
+        <div class="package-box">
+            <img src="assets/images/5star-package.jpg" alt="5 Star Package">
+            <h3>5 Star Package</h3>
+            <ul>
+                <li>5 Star Hotel</li>
+                <li>Visa</li>
+                <li>Transport</li>
+                <li>Return Ticket</li>
+                <li>Health Insurance</li>
+                <li>Makkah & Madina Ziarat</li>
+            </ul>
+            <a href="#5star" class="btn-learn">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<!-- scroll -->
+ <section class="counters-home">
+    <div class="counter-box">
+        <h3><span class="counter" data-target="95">0</span>+</h3>
+        <p>Happy Customers</p>
+    </div>
+    <div class="counter-box">
+        <h3><span class="counter" data-target="50">0</span>+</h3>
+        <p>Airline Partners</p>
+    </div>
+    <div class="counter-box">
+        <h3><span class="counter" data-target="100">0</span>+</h3>
+        <p>Packages Delivered</p>
+    </div>
+</section>
+
+
+
+<!-- lsdkjf -->
+ <section class="services-home">
+    <h2>Our Special Services</h2>
+    <div class="services-grid">
+        <!-- Visa Service -->
+        <div class="service-box">
+            <h3>Visa Service</h3>
+            <p>We handle your Umrah visa quickly and efficiently.</p>
+            <a href="https://wa.me/923335225215" target="_blank" class="btn-reserve">Reserve Now</a>
+        </div>
+
+        <!-- Affordable Ticket -->
+        <div class="service-box">
+            <h3>Affordable Ticket</h3>
+            <p>Get the best flight deals and save on your journey.</p>
+            <a href="https://wa.me/923335225215" target="_blank" class="btn-reserve">Reserve Now</a>
+        </div>
+
+        <!-- Great Support -->
+        <div class="service-box">
+            <h3>Great Support</h3>
+            <p>Our team is available 24/7 to assist you throughout your trip.</p>
+            <a href="https://wa.me/923335225215" target="_blank" class="btn-reserve">Reserve Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- animation -->
+<section class="loop-animation">
+    <div class="marquee">
+        <span>Karwan e Bismillah Travels & Tours</span>
+        <span>Karwan e Bismillah Travels & Tours</span> <!-- duplicate for seamless loop -->
+        <span>Karwan e Bismillah Travels & Tours</span> <!-- duplicate for seamless loop -->
+        <span>Karwan e Bismillah Travels & Tours</span> <!-- duplicate for seamless loop -->
+    </div>
+</section>
+
 
 
 
@@ -89,7 +210,29 @@
   </div>
 </footer>
  
+<script>
+  const counters = document.querySelectorAll('.counter');
 
+counters.forEach(counter => {
+    counter.innerText = '0';
+    
+    const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const current = +counter.innerText;
+        const increment = target / 100; // speed of counting
+        
+        if(current < target){
+            counter.innerText = Math.ceil(current + increment);
+            setTimeout(updateCounter, 20);
+        } else {
+            counter.innerText = target;
+        }
+    };
+    
+    updateCounter();
+});
+
+</script>
 
 </body>
 </html>

@@ -35,6 +35,7 @@
         </div>
     </nav>
 
+    
      <!-- Hero Section -->
 <section class="hero">
   <div class="hero-text">
@@ -46,6 +47,8 @@
     <img src="assets/images/mai.jpg" alt="Karwan e Bismillah" />
   </div>
 </section>
+
+
 
 <!-- box -->
  <section class="packages-home">
@@ -113,21 +116,7 @@
     </div>
 </section>
 
-<!-- scroll -->
- <section class="counters-home">
-    <div class="counter-box">
-        <h3><span class="counter" data-target="95">0</span>+</h3>
-        <p>Happy Customers</p>
-    </div>
-    <div class="counter-box">
-        <h3><span class="counter" data-target="50">0</span>+</h3>
-        <p>Airline Partners</p>
-    </div>
-    <div class="counter-box">
-        <h3><span class="counter" data-target="100">0</span>+</h3>
-        <p>Packages Delivered</p>
-    </div>
-</section>
+
 
 
 
@@ -169,6 +158,49 @@
 </section>
 
 
+<!-- coment -->
+ <section class="testimonial-home">
+    <div class="testimonial-box">
+        <p class="comment">"I really like their service! Everything from visa processing to transport was perfect. Highly recommended!"</p>
+        <h4 class="customer-name">— Ahmed Khan</h4>
+        <!-- <img src="assets/images/customer.jpg" alt="Customer" class="customer-img"> -->
+    </div>
+</section>
+
+<!-- why -->
+<section class="why-choose-us">
+    <h2>Why Choose Us</h2>
+    <div class="features-grid">
+        <div class="feature-box">
+            <h3>Expert Guidance</h3>
+            <p>Our experienced team ensures your Umrah journey is smooth and stress-free.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Best Prices</h3>
+            <p>We offer affordable packages without compromising on comfort and services.</p>
+        </div>
+        <div class="feature-box">
+            <h3>24/7 Support</h3>
+            <p>Our support team is available anytime to assist you before, during, and after your trip.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Trusted Partners</h3>
+            <p>We work with reliable hotels, airlines, and transport providers for a seamless experience.</p>
+        </div>
+    </div>
+</section>
+
+<!-- contact -->
+ <section class="contact-form-section">
+        <h2>Send Us a Message</h2>
+        <form class="contact-form" id="whatsappForm">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <input type="text" id="subject" placeholder="Subject" required>
+    <textarea id="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
+    </section>
 
 
     <!-- footer -->
@@ -234,5 +266,36 @@ counters.forEach(counter => {
 
 </script>
 
+
+<!-- new -->
+ 
+
+ <script>
+  
+  document.getElementById("whatsappForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Get form values
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var subject = document.getElementById("subject").value;
+    var message = document.getElementById("message").value;
+
+    // WhatsApp number (without spaces or dashes)
+    var phoneNumber = "923335225215";
+
+    // Create WhatsApp message text
+    var whatsappMessage = 
+        "New Contact Form Submission:%0A" +
+        "Name: " + name + "%0A" +
+        "Email: " + email + "%0A" +
+        "Subject: " + subject + "%0A" +
+        "Message: " + message;
+
+    // Redirect to WhatsApp
+    var url = "https://wa.me/" + phoneNumber + "?text=" + whatsappMessage;
+    window.open(url, "_blank");
+});
+ </script>
 </body>
 </html>

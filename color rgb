@@ -3,3 +3,73 @@ Dark Brown	rgb(92, 64, 51)
 Light Beige	rgb(245, 239, 230)
 Hover Orange	rgb(255, 150, 50)
 Text White	rgb(255, 255, 255)
+
+
+<!-- now -->
+ <!-- Hero Section -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Karwan e Bismillah Tours & Travels</h1>
+    <p>Your trusted partner for memorable journeys across the world. Experience comfort, trust, and unforgettable adventures.</p>
+    <a href="#services" class="hero-btn">Explore Services</a>
+  </div>
+  <div class="hero-image">
+    <img src="assets/images/mai.jpg" alt="Karwan e Bismillah" />
+  </div>
+</section>
+
+
+ .hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  background-color: #fff;
+}
+
+.hero-text {
+  flex: 1;
+  padding-right: 30px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #2e3a59; /* Dark luxury tone */
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #f1b14f, #f0d68a); /* Gold gradient */
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}

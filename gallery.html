@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karwan e Bismillah Travels & Tour |Rawalpindi</title>
-    <link rel="stylesheet" href="assets/style/about.css">
+    <link rel="stylesheet" href="assets/style/gallery.css">
     <link rel="icon" href="assets/images/Congratulations! Matric is Done!.png">
     <!-- Font Awesome CDN -->
 <link
@@ -32,70 +32,79 @@
             <h1 class="logo"><img src="assets/images/Congratulations! Matric is Done!.png" alt="" height="50vh" ></h1>
         </div>
     </nav>
-    <!-- kjsdhf -->
 
-       <!-- Page Title -->
-    <header class="about-header">
-        <h1>About Us</h1>
-        <p>Your Journey, Our Responsibility</p>
-    </header>
+	<!-- start noe -->
+	 <!-- Gallery Section -->
+<h1 class="about-title">OUR GALLERY</h1>
 
-    <!-- About Section -->
-    <section class="about-section">
-        <div class="about-image">
-            <img src="assets/images/use me.jpg" alt="Karwan e Bismillah Travels & Tours">
-        </div>
-        <div class="about-text">
-            <h2>Who We Are</h2>
-            <p>
-                Karwan e Bismillah Travels & Tours is your trusted partner in making travel dreams come true.
-                With years of experience, we specialize in domestic and international tours, visa assistance,
-                ticket booking, and personalized travel packages.  
-            </p>
-            <p>
-                Our mission is to provide you with a safe, comfortable, and memorable travel experience — whether you’re traveling for leisure, business, or pilgrimage.
-            </p>
-        </div>
-    </section>
+<div class="carousel-container">
+	<button class="nav-arrow left">‹</button>
+	<div class="carousel-track">
+		<div class="card"><img src="assets/images/p1.jpg" alt=""></div>
+		<div class="card"><img src="assets/images/hotel 1.jpg" alt=""></div>
+		<div class="card"><img src="assets/images/room 1.jpg" alt=""></div>
+		<div class="card"><img src="assets/images/hotel 2.jpg" alt=""></div>
+		<div class="card"><img src="assets/images/p2.jpg" alt=""></div>
+		<div class="card"><img src="assets/images/hotel 3.jpg" alt=""></div>
+		<div class="card"><img src="assets/images/p3.jpg" alt=""></div>
+		<div class="card"><img src="assets/images/hotel 4.jpg" alt=""></div>
+		<div class="card"><img src="assets/images/p4.jpg" alt=""></div>
+		<div class="card"><img src="assets/images/room 2.jpg" alt=""></div>
+		<div class="card"><img src="assets/images/p5.jpg" alt=""></div>
+		<div class="card"><img src="assets/images/p6.jpg" alt=""></div>
+		
+	
+	</div>
+	<button class="nav-arrow right">›</button>
+</div>
 
-    <!-- Mission & Vision -->
-    <section class="mission-vision">
-        <div class="mv-card">
-            <h3>Our Mission</h3>
-            <p>
-                To deliver exceptional travel services with honesty, transparency, and customer satisfaction as our top priorities.
-            </p>
-        </div>
-        <div class="mv-card">
-            <h3>Our Vision</h3>
-            <p>
-                To be the most reliable travel agency in Pakistan, connecting people with destinations across the globe.
-            </p>
-        </div>
-    </section>
 
-    <!-- Why Choose Us -->
-    <section class="why-choose">
-        <h2>Why Choose Us?</h2>
-        <ul>
-            <li>✔ Experienced & Professional Team</li>
-            <li>✔ Affordable & Flexible Packages</li>
-            <li>✔ 24/7 Customer Support</li>
-            <li>✔ 100% Client Satisfaction</li>
-        </ul>
-    </section>
+<script >
 
-    <!-- Footer -->
-     <!-- Quick Links Section -->
-<nav class="quick-links">
-    <a href="index.html">🏠 Home</a>
-    <a href="umrah.html">🕋 Umrah Packages</a>
-    <a href="contact.html">📞 Contact</a>
-    <a href="gallery.html">🖼 Gallery</a>
-    <a href="about.html" class="active">ℹ About Us</a>
-</nav>
+const cards = document.querySelectorAll(".card");
+const leftArrow = document.querySelector(".nav-arrow.left");
+const rightArrow = document.querySelector(".nav-arrow.right");
+let currentIndex = 0;
+let isAnimating = false;
 
-   
+function updateCarousel(newIndex) {
+	if (isAnimating) return;
+	isAnimating = true;
+
+	currentIndex = (newIndex + cards.length) % cards.length;
+
+	cards.forEach((card, i) => {
+		const offset = (i - currentIndex + cards.length) % cards.length;
+		card.classList.remove("center", "left-1", "left-2", "right-1", "right-2", "hidden");
+
+		if (offset === 0) {
+			card.classList.add("center");
+		} else if (offset === 1) {
+			card.classList.add("right-1");
+		} else if (offset === 2) {
+			card.classList.add("right-2");
+		} else if (offset === cards.length - 1) {
+			card.classList.add("left-1");
+		} else if (offset === cards.length - 2) {
+			card.classList.add("left-2");
+		} else {
+			card.classList.add("hidden");
+		}
+	});
+
+	setTimeout(() => { isAnimating = false; }, 800);
+}
+
+leftArrow.addEventListener("click", () => updateCarousel(currentIndex - 1));
+rightArrow.addEventListener("click", () => updateCarousel(currentIndex + 1));
+cards.forEach((card, i) => card.addEventListener("click", () => updateCarousel(i)));
+
+updateCarousel(0);
+
+
+</script>
+
+    
 
 
 

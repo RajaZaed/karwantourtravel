@@ -252,181 +252,202 @@
     text-align: center;
   }
 }
-/* ksjdfh */
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-} */
+
+
+/* new */
 
 body {
-    background: #f8f9fa;
-    color: #333;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #f5f5f5;
 }
 
-/* Header */
-.about-header {
-    text-align: center;
-    padding: 2rem 1rem;
-    background: #082a7b;
-    color: white;
+/* Title */
+.about-title {
+	margin-top: 8vh;
+	font-size: 4rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #082a7b;
+	text-align: center;
 }
 
-.about-header h1 {
-    font-size: 2.5rem;
+/* Carousel container */
+.carousel-container {
+	width: 100%;
+	max-width: 1200px;
+	height: 450px;
+	position: relative;
+	perspective: 1000px;
+	margin-top: 80px;
 }
 
-.about-header p {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
+/* Carousel track */
+.carousel-track {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* About Section */
-.about-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    padding: 3rem 1rem;
-    flex-wrap: wrap;
+/* Cards */
+.card {
+	position: absolute;
+	width: 280px;
+	height: 380px;
+	background: white;
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+	transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	cursor: pointer;
 }
 
-.about-image img {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+.card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
-.about-text {
-    max-width: 500px;
+.card.center {
+	z-index: 10;
+	transform: scale(1.1) translateZ(0);
 }
 
-.about-text h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #082a7b;
+.card.left-2 {
+	transform: translateX(-400px) scale(0.8) translateZ(-300px);
+	opacity: 0.7;
 }
 
-.about-text p {
-    line-height: 1.6;
-    margin-bottom: 1rem;
+.card.left-1 {
+	transform: translateX(-200px) scale(0.9) translateZ(-100px);
+	opacity: 0.9;
 }
 
-/* Mission & Vision */
-.mission-vision {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem 1rem;
-    flex-wrap: wrap;
+.card.right-1 {
+	transform: translateX(200px) scale(0.9) translateZ(-100px);
+	opacity: 0.9;
 }
 
-.mv-card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    max-width: 400px;
-    text-align: center;
+.card.right-2 {
+	transform: translateX(400px) scale(0.8) translateZ(-300px);
+	opacity: 0.7;
 }
 
-.mv-card h3 {
-    color: #082a7b;
-    margin-bottom: 0.5rem;
+.card.hidden {
+	opacity: 0;
+	pointer-events: none;
 }
 
-/* Why Choose Us */
-.why-choose {
-    text-align: center;
-    padding: 2rem 1rem;
+/* Navigation arrows */
+.nav-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(8, 42, 123, 0.6);
+	color: white;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	font-size: 1.5rem;
+	border: none;
 }
 
-.why-choose h2 {
-    margin-bottom: 1rem;
-    color: #082a7b;
+.nav-arrow.left {
+	left: 20px;
 }
 
-.why-choose ul {
-    list-style: none;
-    padding: 0;
+.nav-arrow.right {
+	right: 20px;
 }
 
-.why-choose li {
-    background: white;
-    margin: 0.5rem auto;
-    padding: 0.8rem 1rem;
-    border-radius: 6px;
-    max-width: 400px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+/* Responsive styles */
+@media (max-width: 1024px) {
+	.about-title {
+		font-size: 3rem;
+		margin-top: 18vh;
+	}
+
+	.carousel-container {
+		height: 400px;
+	}
+
+	.card {
+		width: 240px;
+		height: 340px;
+	}
+
+	.card.left-2 {
+		transform: translateX(-300px) scale(0.8) translateZ(-250px);
+	}
+
+	.card.right-2 {
+		transform: translateX(300px) scale(0.8) translateZ(-250px);
+	}
 }
 
-/* Footer */
-.about-footer {
-    text-align: center;
-    padding: 1rem;
-    background: #082a7b;
-    color: white;
-    margin-top: 2rem;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
-    .about-section {
-        flex-direction: column;
-        text-align: center;
-    }
-    .about-text {
-        max-width: 100%;
-    }
-    .mission-vision {
-        flex-direction: column;
-        align-items: center;
-    }
+	.about-title {
+		font-size: 2.2rem;
+		top: 20px;
+	}
+
+	.carousel-container {
+		height: 320px;
+	}
+
+	.card {
+		width: 200px;
+		height: 280px;
+	}
+
+	.card.left-1 {
+		transform: translateX(-120px) scale(0.9) translateZ(-80px);
+	}
+
+	.card.right-1 {
+		transform: translateX(120px) scale(0.9) translateZ(-80px);
+	}
+
+	.card.left-2,
+	.card.right-2 {
+		display: none; /* Hide far cards on small screens */
+	}
 }
 
-
-/* lskdjf */
-/* Quick Links Navigation */
-.quick-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1.5rem;
-    background: #ffffff;
-    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.05);
-    margin-top: 2rem;
-}
-
-.quick-links a {
-    text-decoration: none;
-    padding: 0.6rem 1rem;
-    border-radius: 6px;
-    background: #082a7b;
-    color: white;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.quick-links a:hover {
-    background: #0a3ec9;
-}
-
-.quick-links a.active {
-    background: #0a3ec9;
-    font-weight: bold;
-}
-
-/* Mobile adjustments */
 @media (max-width: 480px) {
-    .quick-links {
-        flex-direction: column;
-        align-items: center;
-    }
-    .quick-links a {
-        width: 80%;
-        text-align: center;
-    }
+	.about-title {
+		font-size: 1.6rem;
+		top: 15px;
+	}
+
+	.carousel-container {
+		height: 250px;
+	}
+
+	.card {
+		width: 160px;
+		height: 220px;
+	}
+
+	.nav-arrow {
+		width: 30px;
+		height: 30px;
+		font-size: 1.2rem;
+	}
 }

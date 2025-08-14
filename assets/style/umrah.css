@@ -426,3 +426,60 @@
     font-size: 1.2rem;
     color: #333;
 }
+
+/* paltinum package */
+
+/* packae form */
+.booking-form-section {
+    padding: 60px 10%;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.booking-form-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+#bookingForm {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#bookingForm input,
+#bookingForm select {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#bookingForm input:focus,
+#bookingForm select:focus {
+    border-color: rgb(255,150,50);
+    box-shadow: 0 0 8px rgba(255,150,50,0.4);
+    outline: none;
+}
+
+#bookingForm button {
+    padding: 15px;
+    background-color: rgb(255,150,50);
+    color: #000;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#bookingForm button:hover {
+    background-color: blue;
+    color: #fff;
+}

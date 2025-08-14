@@ -78,7 +78,7 @@
                 <li>Health Insurance</li>
                 <li>Makkah & Madina Ziarat</li>
             </ul>
-            <a href="#book" class="btn-book">Book Now</a>
+            <a href="#bookingForm" class="btn-book">Book Now</a>
         </div>
     </div>
 </section>
@@ -99,11 +99,72 @@
                 <li>Health Insurance</li>
                 <li>Makkah & Madina Ziarat</li>
             </ul>
-            <a href="#book" class="btn-book">Book Now</a>
+            <a href="#bookingForm" class="btn-book">Book Now</a>
         </div>
     </div>
 </section>
 
+<!-- platinum -->
+ <section class="package-section">
+    <div class="package-card platinum">
+        <div class="package-image">
+            <img src="assets/images/hotel 2.jpg" alt="Platinum Package">
+        </div>
+        <div class="package-details">
+            <h2>Platinum Package</h2>
+            <ul>
+                <li>4 Star Hotel</li>
+                <li>Visa Included</li>
+                <li>Transport Provided</li>
+                <li>Return Ticket</li>
+                <li>Health Insurance</li>
+                <li>Makkah & Madina Ziarat</li>
+            </ul>
+            <a href="#bookingForm" class="btn-book">Book Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- 5 star package -->
+ <section class="package-section">
+    <div class="package-card platinum">
+        <div class="package-image">
+            <img src="assets/images/hotel 2.jpg" alt="Platinum Package">
+        </div>
+        <div class="package-details">
+            <h2>5 Star Package</h2>
+            <ul>
+                <li>5 Star Hotel</li>
+                <li>Visa Included</li>
+                <li>Transport Provided</li>
+                <li>Return Ticket</li>
+                <li>Health Insurance</li>
+                <li>Makkah & Madina Ziarat</li>
+            </ul>
+            <a href="#bookingForm" class="btn-book">Book Now</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- package form -->
+ <section class="booking-form-section">
+    <h2>Book Your Package</h2>
+    <form id="bookingForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <input type="text" id="location" placeholder="Your Location" required>
+        <select id="package" required>
+            <option value="" disabled selected>Select Package</option>
+            <option value="Silver Package">Silver Package</option>
+            <option value="Golden Package">Golden Package</option>
+            <option value="Platinum Package">Platinum Package</option>
+            <option value="5 Star Package">5 Star Package</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+</section>
 
 
 
@@ -197,6 +258,25 @@ counters.forEach(counter => {
 });
 
 </script>
+<!-- form -->
+ <script>
+    document.getElementById('bookingForm').addEventListener('submit', function(e){
+    e.preventDefault();
 
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const location = document.getElementById('location').value;
+    const packageName = document.getElementById('package').value;
+
+    const message = `Hello, I want to book a package:\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nLocation: ${location}\nPackage: ${packageName}`;
+
+    const whatsappNumber = "+923335225215";
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, '_blank');
+});
+
+ </script>
 </body>
 </html>

@@ -167,6 +167,65 @@
     </div>
 </section>
 
+<section class="ceo-section">
+  <h2>CEO</h2>
+
+  <div class="ceo-card">
+    <img
+      src="assets/images/bbb.jpg"
+      alt="CEO of Karwan e Bismillah Travels & Tours"
+      class="ceo-photo"
+    />
+
+    <div class="ceo-info">
+      <h3 class="ceo-name">Naveed Ahmed</h3>
+      <p class="ceo-title">CEO Karwan e Bismillah Travels & Tours</p>
+
+      <div class="ceo-actions">
+        <a href="tel:+923335225215" class="btn btn-call">
+          Call: +92 333 5225215
+        </a>
+        <a href="tel:+923335225215" class="btn btn-call">
+          Call: +92 319 5711819
+        </a>
+        <a href="https://wa.me/923335225215" target="_blank" class="btn btn-wa">
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="ceo-section">
+  <h2>Director</h2>
+
+  <div class="ceo-card">
+    <img
+      src="assets/images/ccc.jpg"
+      alt="CEO of Karwan e Bismillah Travels & Tours"
+      class="ceo-photo"
+      style="object-fit: ;"
+    />
+
+    <div class="ceo-info">
+      <h3 class="ceo-name">Faisal Mehmood</h3>
+      <p class="ceo-title">Director Faisal Mehmood</p>
+
+      <div class="ceo-actions">
+        <a href="tel:+923335225215" class="btn btn-call">
+          Call: +92 333 5563178
+        </a>
+        <a href="tel:+923335225215" class="btn btn-call">
+          Call: +92 300 5386083
+        </a>
+        <a href="https://wa.me/923335563178" target="_blank" class="btn btn-wa" >
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- why -->
 <section class="why-choose-us">
     <h2>Why Choose Us</h2>
@@ -208,7 +267,7 @@
   <div class="footer-container">
     <!-- Logo & Description -->
     <div class="footer-about">
-      <img src="assets/images/Congratulations! Matric is Done!.png" alt="Karwan e Bismillah Logo" class="footer-logo">
+      <img src="assets/images/use me.jpg" alt="Karwan e Bismillah Logo" class="footer-logo">
       <p>
         Karwan e Bismillah Travels & Tour provides exceptional Umrah, Hajj, and travel services with
         comfort, convenience, and care. Our mission is to make your journey spiritual and memorable.
@@ -296,6 +355,20 @@ counters.forEach(counter => {
     var url = "https://wa.me/" + phoneNumber + "?text=" + whatsappMessage;
     window.open(url, "_blank");
 });
+ </script>
+ <script>
+    // Optional: subtle entrance animation
+document.addEventListener('DOMContentLoaded', () => {
+  const card = document.querySelector('.ceo-card');
+  card.style.opacity = 0;
+  card.style.transform = 'translateY(20px)';
+  setTimeout(() => {
+    card.style.transition = 'opacity 400ms ease, transform 400ms ease';
+    card.style.opacity = 1;
+    card.style.transform = 'translateY(0)';
+  }, 100);
+});
+
  </script>
 </body>
 </html>
